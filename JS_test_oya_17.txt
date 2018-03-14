@@ -1,0 +1,205 @@
+# html/css
+1. 文字を中央にするためにはどのようなcssを使うか答えなさい
+text-align: center;
+
+2. 横並びを実現する為にはどのようなcssを使うか答えなさい（positionレイアウト以外）
+display: flex;（display: inline-flex;）
+float: left;
+
+3. 背景画像を利用するにはどのcssを使うか答えなさい
+background-image: url();
+
+4. 文字の色を変更するにはどのようなcssを使うか答えなさい
+color: #fff;
+
+5. リンクを設定する為に必要なhtmlのタグを答えなさい
+<a href="#"></a>
+
+6. 見出しタグにはどのような種類があるか全て答えなさい
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+
+7. 段落タグとは何かを答えなさい
+→文の段落を区切る機能
+<p></p>
+
+8. リストタグとは何かを答えなさい
+→リストの項目を記述する際に使用
+<ul>
+  <li></li>
+  <li></li>
+  ...
+</ul>
+リスト項目に順序を付けない時に使用
+
+<ol>
+  <li></li>
+  <li></li>
+  ...
+</ol>
+リスト項目に順序を付ける時に使用
+
+9. inputタグにはどのような種類があるか4つ答えなさい（好きなもので良い）
+type="text"
+type="checkbox"
+type="radio"
+type="submit"
+
+10. cssで線をつけるためにはどのようなcssを使うか答えなさい
+border: 1px(太さ) solid(線の種類) #fff(色);
+
+11. 文字に影をつける為にはどのようなcssを使うか答えなさい
+text-shadow: 5px(横) 5px(縦) 5px(ぼかし) #000(色);
+
+12. cssのhoverとはどのような挙動のことか簡単に記述しなさい
+マウスポインタが要素の上に乗った時に挙動するcss
+
+13. div#boxを幅900px,高さ500pxで作成した。このdiv#boxを画面中央にするにはどうすればいいか答えなさい
+body {
+  position: relative;
+}
+div#box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+14. 画像を表示させるタグは何か答えなさい
+<img src="" alt="" />
+
+15. cssアニメーションを行う場合、時間的変化を指定するcssプロパティを答えなさい
+animation-duration: 1s;
+
+# php
+1. 変数の名前をつける際に絶対にやってはいけないことを書きなさい
+数字や記号から名前をつける
+
+2. 変数を使うメリットは何かを答えなさい
+修正等をする時に一箇所だけで済むので楽。ミスを防ぎやすくなる。
+
+3. if文とは何かを答えなさい
+「もし〜したら〜する」という条件分岐を示す構文
+
+4. mt_rand()とはどのような関数かを簡単に書きなさい
+乱数を生成する関数
+
+5. phpを記述する際<?php ?>の間に記述する　◯か×か
+○
+
+6. SQLにはinsert,update,◯◯◯◯,◯◯◯◯の４つがある。◯◯◯◯に記述されている残り２つを書きなさい
+select,delete
+
+7. phpの文章の終わりには必ずなにをつけないといけないか答えなさい
+;
+
+8. echo文を使うとどうなるか簡単に答えなさい
+echo "文字列";
+" "内の文字列が出力される（数値や変数のみの場合は""の記述はいらない）
+
+9. 下記の問題を答えなさい
+echo 8 + 2;
+→10
+echo 10 + 14;
+→24
+
+10. 下記の問題を答えなさい
+echo 11 - 3;
+→8
+echo 5 * 3;
+→15
+echo 2 / 10;
+→5
+
+11. camp_db,camp_table,のデータを「全検」SELECT表示する構文を答えなさい
+<?php
+//1.  DB接続します
+try {
+  $pdo = new PDO('mysql:dbname=camp_db;charset=utf8;host=localhost','root','');
+} catch (PDOException $e) {
+  exit('データベースに接続できませんでした。'.$e->getMessage());
+}
+
+//２．データ登録SQL作成
+//作ったテーブル名を書く場所
+$stmt = $pdo->prepare("SELECT * FROM camp_table");
+$status = $stmt->execute();
+
+//３．データ表示
+$view=""; //受け取るための変数を事前に作ります。
+if($status==false){
+  //execute（SQL実行時にエラーがある場合）
+  $error = $stmt->errorInfo();
+  exit("ErrorQuery:".$error[2]);
+
+}else{
+  //Selectデータの数だけ自動でループしてくれる
+  while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
+    $view .= "**********";
+  }
+
+}
+?>
+
+12. SELECT表示を行う際、「降順」で表示をするにはどのような記述が必要か簡単に答えなさい
+SELECT * FROM camp_table ORDER BY id DESC;
+
+13. DELETEを行うための構文を書きなさい(camp_db,camp_tableを基準にする)
+DELETE FROM camp_table;
+
+# js
+1. jQueryのイベントを３つ書きなさい(好きなもので可)
+"click","ready","scroll"
+
+2. jQueryを利用する際「セレクタ」とはどういう意味なのか簡単に書きなさい
+どのタイミングで処理するかを指示するもの
+
+3. jQueryを使うメリットにはどういったものがあるか簡潔にまとめなさい（一つで良い）
+ブラウザのごとの差異を軽減してくれる
+
+4. [fadeIn('4000');]はどのような挙動をするか簡単に書きなさい
+要素を4秒間、フェードイン処理をする
+
+5. [slideUp]はどのような挙動をするか簡単に書きなさい
+下から上方向に要素をスライド表示する
+
+6. [addClass]はどのような挙動をするか簡単に書きなさい
+指定した要素に、CSSクラスを追加する
+
+7. [hasClass]はどのような挙動をするか簡単に書きなさい
+指定した要素に、指定したCSSクラスがあるか判定する。
+
+8. jQueryを使ってborderを利用する際どのように記述するか書きなさい(線の太さ3px 一直線　色は赤)
+$('#').css('border','3px solid red');
+
+9. [console.log]はどのような挙動をするか簡単に書きなさい
+引数として設定した値をデバッガーのコンソールに表示する関数
+
+10. [click]イベントを設定するために必要な雛形を記述しなさい(div#boxにイベントを設定する)
+$('#box').on('click',function(){
+});
+
+
+___
+___
+## 解答する際
+### 例）
+
+### html/css
+1. 文字を中央にするためにはどのようなcssを使うか答えなさい
+xxxxxx(答えを書く)
+
+2. 横並びを実現する為にはどのようなcssを使うか答えなさい（positionレイアウト以外）
+xxxxxx(答えを書く)
+
+//以下問題省略
+
+___
+___
+お休みされた方はgithubの設定をしていないため、必ず個別で連絡するようにお願いします。
+尚、こちら課題扱いなので必ず提出してください。
