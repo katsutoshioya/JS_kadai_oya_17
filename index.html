@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>COORDINATE SET FAIR</title>
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <p id="pageTop"> <a href="#" target="_blank"><i class="fa fa-chevron-up"></i></a> </p>
+  <section id="main">
+    <div>
+      <p id="date">2018.03.12.mon - 03.18.sun</p>
+      <h1>COORDINATE<br />SET FAIR</h1>
+      <p><span class="bd">TOPS</span> ＋ <span class="bd">BOTTOMS</span> ＋ <span class="bd">SHOES</span> = <em>&#165;20,000</em> <span id="tax">(+tax)</span></p>
+    </div>
+  </section>
+  <section id="coodinate">
+    <h2>ITEM SELECT</h2>
+    <p>TOPS・BOTTOMS・SHOESの各対象アイテムの中から<br />好きなアイテムを1点ずつ選択すると、<br />あなたの選んだコーディネートが完成！</p>
+    <div class="flexBox">
+      <form action="janken02.php" method="post">
+        <h3>TOPS</h3>
+        <ul id="tops" class="flexBox">
+          <li>
+            <label><input type="radio" name="tops" value="01" class="radio"><img src="images/tops_01.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="tops" value="02" class="radio"><img src="images/tops_02.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="tops" value="03" class="radio"><img src="images/tops_03.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="tops" value="04" class="radio"><img src="images/tops_04.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="tops" value="05" class="radio"><img src="images/tops_05.jpg" class="radio_image" /></label>
+          </li>
+        </ul>
+        <h3>BOTTOMS</h3>
+        <ul id="bottoms" class="flexBox">
+          <li>
+            <label><input type="radio" name="bottoms" value="01" class="radio"><img src="images/bottoms_01.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="bottoms" value="02" class="radio"><img src="images/bottoms_02.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="bottoms" value="03" class="radio"><img src="images/bottoms_03.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="bottoms" value="04" class="radio"><img src="images/bottoms_04.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="bottoms" value="05" class="radio"><img src="images/bottoms_05.jpg" class="radio_image" /></label>
+          </li>
+        </ul>
+        <h3>SHOES</h3>
+        <ul id="shoes" class="flexBox">
+          <li>
+            <label><input type="radio" name="shoes" value="01" class="radio"><img src="images/shoes_01.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="shoes" value="02" class="radio"><img src="images/shoes_02.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="shoes" value="03" class="radio"><img src="images/shoes_03.jpg" class="radio_image" /></label>
+          </li>
+          <li>
+            <label><input type="radio" name="shoes" value="04" class="radio"><img src="images/shoes_04.jpg" class="radio_image" /></label>
+          </li>
+        </ul>
+      </form>
+      <div id="result">
+        <p class="r_tops"></p>
+        <p class="r_bottoms"></p>
+        <p class="r_shoes"></p>
+      </div>
+    </div>
+  </section>
+  <section id="styling">
+    <h2>STYLING</h2>
+    <p>スタッフがおすすめするスタイリングをご紹介。</p>
+    <ul class="slide">
+      <li><img src="images/style_01.jpg" alt="" /></li>
+      <li><img src="images/style_02.jpg" alt="" /></li>
+      <li><img src="images/style_03.jpg" alt="" /></li>
+      <li><img src="images/style_04.jpg" alt="" /></li>
+      <li><img src="images/style_05.jpg" alt="" /></li>
+      <li><img src="images/style_06.jpg" alt="" /></li>
+      <li><img src="images/style_07.jpg" alt="" /></li>
+    </ul>
+  </section>
+  <footer>
+    <small>Copyright (c) **** All Rights Reserved.</small>
+  </footer>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
